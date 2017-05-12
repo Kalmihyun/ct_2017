@@ -1,0 +1,27 @@
+﻿import turtle
+wn = turtle.Screen()
+t1 = turtle.Turtle()
+
+oldpos = t1.pos()
+
+def giyeok(size) :
+ t1.fd(size)
+ t1.rt(90)
+ t1.fd(size)
+ t1.penup()
+ t1.setpos(oldpos)
+ oldheading = t1.heading()
+ t1.setheading(oldheading + 45)
+ t1.pendown()
+
+
+giyeok(100)
+giyeok(100)
+giyeok(100)
+giyeok(100)
+giyeok(100)
+giyeok(100)
+giyeok(100)
+giyeok(100)
+
+wn.exitonclick()

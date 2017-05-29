@@ -1,0 +1,46 @@
+﻿import turtle
+wn = turtle.Screen()
+t1 = turtle.Turtle()
+
+width = wn.window_width()
+w1 = (width - 60) / 3
+x1 = 0.0 - w1
+x2 = 0.0
+x3 = 0.0 + w1
+
+
+def draw(size,angle) :
+    t1.write(t1.pos())
+    t1.forward(size)
+    t1.right(angle)
+
+def At(x,y) :
+    t1.penup()
+    t1.goto(x,y)
+    t1.pendown()
+
+def drawSquare(x,y,size) :
+    At(x,y)
+    for i in range(4) :
+        t1.write(t1.pos())
+        t1.fd(size)
+        t1.right(90)
+
+
+def drawPentagon(x,y,size) :
+    At(x,y)
+    for i in range(5) :
+        draw(size,72)
+    
+def drawStarAt(x,y,size) :
+    At(x,y)
+    for i in range(5) :
+        draw(size,144)
+    
+
+
+drawSquare(x1,0,100)
+drawPentagon(x2,0,100)
+drawStarAt(x3,0,100)
+
+wn.exitonclick()
